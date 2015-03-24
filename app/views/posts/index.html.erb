@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2 class="pull-left"><%= @subreddit.name %></h2>
+      <%= link_to 'Create Post',
+          new_subreddit_post_path(subreddit_id: @subreddit.id),
+          class: 'btn btn-primary pull-right' %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <ul class="list-unstyled">
+        <% @posts.each do |post| %>
+          <li>
+            <%= link_to post.title,
+                subreddit_post_path(subreddit_id: @subreddit.id, id: post.id) %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
