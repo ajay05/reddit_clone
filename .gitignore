@@ -15,3 +15,14 @@
 /log/*
 !/log/.keep
 /tmp
+
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*~
